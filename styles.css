@@ -323,14 +323,12 @@ section .header{
 
 footer{
     position: relative;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     grid-template-columns: 400px repeat(3, 1fr);
     gap: 2rem;
 }
 
-footer .column2{
-    margin-left: 40rem;
-}
 
 footer .column .logo{
     max-width: 100px;
