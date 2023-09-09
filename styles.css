@@ -134,23 +134,24 @@ header .image{
     position: relative;
 }
 
-header .image::before{
-    content: "o";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 38rem;
-    font-weight: 400;
-    line-height: 20rem;
-    color: #1d4ed8;
-    opacity: 0.2;
-    z-index: -100;
-}
+
 
 header .image img{
-    max-width: 600px;
+    max-width: 300px;
     margin: auto;
+    animation: animate 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+    box-shadow: 5px 5px 5px 5px rgba(13, 110, 253, 0.2);
+}
+
+@keyframes animate{
+    0%, 100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    
 }
 
 section .header{
